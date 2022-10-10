@@ -1,0 +1,33 @@
+* {
+  margin: 0%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ff9;
+  margin: 0;
+  font-family: "Noto Sans Mono", monospace;
+  font-family: "Oswald", sans-serif;
+}
+
+section.home-page {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.card {
+  background: #eaeaea;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+}
+.local-news {
+  background: #eaeaea;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+}
