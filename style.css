@@ -5,9 +5,7 @@
 
 body {
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   height: 100vh;
   background: #3f3d3d;
   margin: 0;
@@ -18,26 +16,24 @@ body {
   background-size: cover;
 }
 
-section.home-page {
-  display: flex;
-  gap: 50px;
-}
-
 .card {
   background: #000000d0;
   padding: 2em;
   border-radius: 30px;
-  width: 100%;
-  max-width: 420px;
+  width: 100vh;
+  max-width: 300px;
   margin: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .local-news {
-  background: #000000d0;
+  /* background: #000000d0;
   padding: 2em;
   border-radius: 30px;
   width: 100%;
-  max-width: 420px;
-  margin: 1em;
+  max-width: 1000px;
+  margin: 1em; */
 }
 .search {
   display: flex;
@@ -75,6 +71,7 @@ input.search-bar {
 
 .description {
   text-transform: capitalize;
+  margin-left: 8px;
 }
 .describe {
   display: flex;
@@ -83,4 +80,16 @@ input.search-bar {
 
 .temp {
   margin-bottom: 0.4em;
+}
+.weather.loading {
+  visibility: hidden;
+  max-width: 20px;
+  position: relative;
+}
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading...";
+  color: #fff;
+  position: absolute;
+  top: 0;
 }

@@ -14,10 +14,13 @@
       rel="stylesheet"
     />
     ">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <section class="home-page">
+      <div class="local-news">
+        <h1>Top 3 local news</h1>
+      </div>
       <div class="card">
         <div class="search">
           <input type="text" class="search-bar" placeholder="Search location" />
@@ -38,7 +41,7 @@
             </svg>
           </button>
         </div>
-        <div class="weather">
+        <div class="weather loading">
           <h2 class="city">Weather in mysore</h2>
           <h1 class="temp">23°C</h1>
           <div class="describe">
@@ -52,9 +55,6 @@
           <div class="humidity">Humidity</div>
           <div class="wind">Wind speed</div>
         </div>
-      </div>
-      <div class="local-news">
-        <h1>Top 3 local news</h1>
       </div>
     </section>
   </body>
