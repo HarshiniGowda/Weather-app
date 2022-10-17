@@ -21,6 +21,7 @@ let weather = {
     const { icon, description } = data.weather[0];
     const { temp, humidity } = data.main;
     const { speed } = data.wind;
+
     document.querySelector(".city").innerText = "Weather in " + name;
     document.querySelector(".icon").src =
       "https://openweathermap.org/img/wn/" + icon + ".png";
@@ -52,3 +53,31 @@ document
   });
 
 weather.fetchWeather("Mysore");
+
+// let news = {
+//   fetchNews: function (city) {
+//     fetch(
+//       "https://newsapi.org/v2/top-headlines?country=" +
+//         city +
+//         "&apiKey=54e6adeffe214d468d4772603a7eea6a" +
+//         this.newsapiKey
+//     ).then((response) => {
+//       console.log(response);
+//       if (!response.ok) {
+//         alert("check for the spelling.");
+//         throw new Error("No information found.");
+//       }
+//       return response.json();
+//     });
+//     .then((data) => this.fetchNews(data))
+//   },
+//   displayNews : function (data) {
+//     const { loacation } = data;
+//     const { title, description, url } = data.articles[0];
+
+//     document.querySelector(".topic1").innerText = articles[0].title;
+//     document.querySelector(".information1").innerText = articles[0].description;
+//     document.querySelector(".url1").innerText = articles[0].url;
+//   },
+// };
+// fetchNews();
