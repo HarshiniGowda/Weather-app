@@ -54,6 +54,10 @@ document
 
 weather.fetchWeather("Mysore");
 
+//fetching news data from a website providing api
+
+const newsApiKey = "54e6adeffe214d468d4772603a7eea6a";
+
 // let news = {
 //   fetchNews: function (city) {
 //     fetch(
