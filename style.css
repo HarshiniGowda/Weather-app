@@ -14,7 +14,7 @@ body {
   background-size: cover;
 }
 .toptopic {
-  /* height: 200vh; */
+  height: 80vh;
   width: 100%;
   display: grid;
   justify-content: center;
@@ -32,12 +32,12 @@ body {
   right: 0;
 }
 
-.local-news {
+.local-news h1 {
   font-size: 30px;
   text-transform: uppercase;
   text-align: center;
   margin: 150px;
-  /* justify-content: center; */
+  justify-content: center;
 }
 .search {
   display: flex;

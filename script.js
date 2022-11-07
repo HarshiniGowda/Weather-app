@@ -57,31 +57,29 @@ weather.fetchWeather("Mysore");
 //fetching news data from a website providing api
 
 const newsApiKey = "54e6adeffe214d468d4772603a7eea6a";
-
-// let news = {
-//   fetchNews: function (city) {
-//     fetch(
-//       "https://newsapi.org/v2/top-headlines?country=" +
-//         city +
-//         "&apiKey=54e6adeffe214d468d4772603a7eea6a" +
-//         this.newsapiKey
-//     ).then((response) => {
-//       console.log(response);
-//       if (!response.ok) {
-//         alert("check for the spelling.");
-//         throw new Error("No information found.");
-//       }
-//       return response.json();
-//     });
-//     .then((data) => this.fetchNews(data))
-//   },
-//   displayNews : function (data) {
-//     const { loacation } = data;
-//     const { title, description, url } = data.articles[0];
-
-//     document.querySelector(".topic1").innerText = articles[0].title;
-//     document.querySelector(".information1").innerText = articles[0].description;
-//     document.querySelector(".url1").innerText = articles[0].url;
-//   },
-// };
-// fetchNews();
+function fetchNews(city) {
+  fetch("https://newsapi.org/v2/everything?q=" + city + "&apiKey=" + newsApiKey)
+    .then((response) => {
+      if (!response.ok) {
+        alert("No News found.");
+        throw new Error("No News found.");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data.articles[0]);
+      const html = data.articles.map((user) => {
+        return `<p>Title: ${user.title}</p>
+        <p>Description: ${user.description}</p>
+        <p>url: ${user.url}</p>`;
+      });
+      console.log(html);
+      document
+        .querySelector()
+        .insertAdjacentHTML("afterbegin", "<h1>Hello</h1>");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+fetchNews("Mysore");
